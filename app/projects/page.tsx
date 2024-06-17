@@ -86,7 +86,7 @@ function ProjectContent() {
                 I&#39;ve selected some of my many projects to showcase here. The complete list can be viewed on my <Link href={"https://github.com/MHEN007"}>Github</Link>.
             </Text>
             
-            <Grid templateColumns={{base:'repeat(1, 1fr)', sm:'repeat(2, 1fr)', md: 'repeat(3, 1fr)'}}>
+            <Grid justifyContent={"center"} templateColumns={{base:'repeat(1, 1fr)', md: 'repeat(3, 1fr)'}}>
                 {
                     projects.map((project: { title: string; short_description: string; full_description: string; link: string; image: string }) => {
                         return (

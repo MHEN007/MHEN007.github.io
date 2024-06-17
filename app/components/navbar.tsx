@@ -17,7 +17,7 @@ export default function Navbar() {
   return (
     <Box 
       bg={"gray.700"} 
-      p={"1.5em"}
+      p={{base: "0.5em", sm: "1em", md: "1.5em"}}
       position={"fixed"}
       top={0}
       right={0}

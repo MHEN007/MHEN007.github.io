@@ -5,6 +5,7 @@ import Content from "../components/content"
 import Navbar from "../components/navbar"
 import projects from "./projects.json"
 import Footer from "../components/footer"
+import { UpDownIcon, ExternalLinkIcon } from "@chakra-ui/icons"
 
 function ProjectItem( { title, short_description, full_description, link, image } : { title: string, short_description: string, full_description: string, link: string, image: string }) {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -17,23 +18,23 @@ function ProjectItem( { title, short_description, full_description, link, image 
                     </Center>
                 </CardHeader>
                 <CardBody color={"gray.100"}>
-                    <Heading fontSize={"2xl"}>
+                    <Heading fontSize={"2xl"} mb={5}>
                         {title}
                     </Heading>
-                    <Text fontSize={"lg"}>
+                    <Text fontSize={"md"}>
                         {short_description}
                     </Text>
                 </CardBody>
                 <CardFooter>
                     <Flex gap={2}>
-                        <Button onClick={onOpen}>
+                        <Button onClick={onOpen}  leftIcon={<UpDownIcon />}>
                             View More
                         </Button>
                         <Spacer />
                         {
                             link === "" ? null : 
                             <Link href={link}>
-                                <Button>
+                                <Button leftIcon={<ExternalLinkIcon />}>
                                     View Project
                                 </Button>
                             </Link>

@@ -1,0 +1,59 @@
+[
+    {
+        "title": "ANN from Scratch",
+        "short_description": "A simple implementation of an Artificial Neural Network from scratch in Python",
+        "full_description": "An implementation of Artificial Neural Network using Mini Batch Stochastic Gradient Descent using Python. The architecture supports training using forward and backpropagation. It is used to predict data from the Iris dataset (uncleaned, unprocessed), with an accuracy of 70%. The implementation uses Numpy packages for numerical processing. The implementation can give summary of the model in text or by outputing an image of the layers and weights of each neurons defined in the model. We provide with four activation functions all from scratch. Those being linear, relu, sigmoid (logistic), and softmax function. We also provide the derivative of each function for the backpropagation. We compare our results with Keras framework and achieved favourable results with our implementation. The model created uses Numpy Doc for docstring styling.",
+        "link": "https://github.com/MHEN007/ANN-from-Scratch",
+        "image": "/projects/ann.png"
+    },
+    {
+        "title": "eCentrix Whatsapp Business App",
+        "short_description": "A Whatsapp business app for eCentrix. Made using Flutter, Laravel, and MySQL",
+        "full_description": "This app is used by eCentrix internally to communicate with clients using their Whatsapp Business profile. The app is made using Flutter for the front-end, Laravel for the back-end, and MySQL for the database. The app is able to send and receive messages from clients using InfoBip API.",
+        "link": "",
+        "image": "/projects/waba.png"
+    },
+    {
+        "title": "Concurrency Control Protocol",
+        "short_description": "A simple implementation of some Concurrency Control Protocols in Java",
+        "full_description": "An implementation of some concurrency control protocols such as two-phase locking, OCC, and MVCC. Implemented using Java for database management course. Runs &#39;transaction&#39; accordingly to the protocol. The implementation is able to handle multiple transactions concurrently and ensures that the transactions are executed in the correct order.",
+        "link": "https://github.com/MHEN007/Concurrency-Control-Protocol",
+        "image": "/projects/ccp.png"
+    },
+    {
+        "title": "WebGL 3D Engine",
+        "short_description": "A simple web 3D engine made using WebGL",
+        "full_description": "WebGL is a graphics API to draw objects on a computer using GPU. This app runs on a browser to render 3D objects. The engine is able to use shaders to render objects, create materials and textures, and animate objects. To allow animation to happen, the engine uses geometric transformations.",
+        "link": "https://github.com/MHEN007/WebGL-3DEngine",
+        "image": "/projects/3d.png"
+    },
+    {
+        "title": "Phone Price Prediction using From Scratch KNN and Naive Bayes",
+        "short_description": "Made KNN and Naive Bayes model from scratch to predict phone prices",
+        "full_description": "This project is a simple implementation of K-Nearest Neighbours and Naive Bayes from scratch in Python. The models are able to predict the price of a phone with an accuracy of ~96%.",
+        "link": "https://github.com/MHEN007/Tubes2_melihatA",
+        "image": "/projects/knn.png"
+    },
+    {
+        "title": "Fullstack Web App: Scholee",
+        "short_description": "Web App using SOAP and REST services with React, Express, Java, Vanilla PHP, Vanilla JS, MySQL, and Postgres",
+        "full_description": "This web application is a course project. This project implements SOAP and REST services to communicate with the frontend. The services also communicate to each other for the business process. There are two frontends, one for users and one for admins, created using PHP and React respectively. The database used is MySQL and Postgres. Awarded as the top three best projects in the class.",
+        "link": "https://gitlab.informatika.org/if3110-2023-02-a",
+        "image": "/projects/wbd.png"
+    },
+    {
+        "title": "Webscraping MIT OCW",
+        "short_description": "Webscraping MIT OCW using Python, Selenium, and BeautifulSoup",
+        "full_description": "The data used in this project are courses of a specific topic from MIT OpenCourseWare, an Open Educational Resources (OER) from MIT. Every course has details of the course itself such as the lecturer(s), url, semester, course id, year, department, etc. For every department, there are details of the department&#39;s website and number of courses within the topic chosen. For every course, there are non-mandatory resources that contains the name of the resoruce, the file type, the type of resource, and the url of the resource itself. The data is stored in a relational model using SQL and managed with MariaDB. Before storing the data in MariaDB, I was able to design a ERD from the data collected as to make sure the data is stored correctly and semantically.",
+        "link": "https://github.com/MHEN007/Seleksi-2023-Tugas-1",
+        "image": "/projects/ocw.png"
+    },
+    {
+        "title": "Face Recognition with Eigenface",
+        "short_description": "Face recognition using Eigenface in Python",
+        "full_description": "Another course project, this time, representing images as matrix and using eigenface to recognize faces. The project is implemented using Python with PyQT",
+        "link": "https://github.com/MHEN007/Algeo02-21004",
+        "image": "/projects/eigenface.png"
+    }
+]
+

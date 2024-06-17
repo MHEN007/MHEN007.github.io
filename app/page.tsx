@@ -1,95 +1,54 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client'
+
+import Navbar from "./components/navbar";
+import Content from "./components/content";
+import { Box, Container, Heading, Stack, Text, Image, Center } from "@chakra-ui/react";
+
+function HomeContent(){
+  return (
+    <Box bg={"#222a38"}>
+      <Container>
+        <Stack
+          py={{base: 150, md:170}}
+          textAlign={"center"}>
+          
+          <Center>
+            <Image
+              src={"./assets/Mahen.JPG"} 
+              alt="MHEN007"
+              borderRadius={"full"}
+              boxSize={{base: 150, sm:200, md: 300}}/>
+          </Center>
+
+          <Heading 
+            py={{base:5, sm: 10}}
+            fontSize={{base: "2xl", sm: "3xl", md: "4xl"}}
+            color={"gray.200"}>
+
+            A smile is a universal welcome <br />
+            <Text as={"i"}>
+              - Max Eastman
+            </Text>
+          </Heading>
+
+          <Text 
+            color={"gray.200"}
+            fontSize={{base:"l", sm:"xl"}}>
+            Hi, my name is Matthew. I am a informatics student with interests in database technology, data management, data science, machine learning, and most importantly, software engineering.
+
+            I have experiences in developing mobile apps, fullstack websites including backend services, machine learning models including NLP Models, CNN, and their frameworks such as PyTorch, and database design.
+          </Text>
+        </Stack>
+      </Container>
+    </Box>
+  )
+}
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+    <>
+      <Navbar /> 
+      <Content content={HomeContent()} />
+    </>
+  )
 }

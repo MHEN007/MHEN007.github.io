@@ -36,7 +36,7 @@
     },
     {
         "title": "Fullstack Web App: Scholee",
-        "short_description": "Web App using SOAP and REST services with React, Express, Java, Vanilla PHP, Vanilla JS, MySQL, and Postgres",
+        "short_description": "Web App using SOAP and REST services with React, Express, Java, Vanilla PHP, Vanilla JS, MySQL, and PostgreSQL",
         "full_description": "This web application is a course project. This project implements SOAP and REST services to communicate with the frontend. The services also communicate to each other for the business process. There are two frontends, one for users and one for admins, created using PHP and React respectively. The database used is MySQL and Postgres. Awarded as the top three best projects in the class.",
         "link": "https://gitlab.informatika.org/if3110-2023-02-a",
         "image": "/projects/wbd.png"
@@ -47,6 +47,27 @@
         "full_description": "The data used in this project are courses of a specific topic from MIT OpenCourseWare, an Open Educational Resources (OER) from MIT. Every course has details of the course itself such as the lecturer(s), url, semester, course id, year, department, etc. For every department, there are details of the department&#39;s website and number of courses within the topic chosen. For every course, there are non-mandatory resources that contains the name of the resoruce, the file type, the type of resource, and the url of the resource itself. The data is stored in a relational model using SQL and managed with MariaDB. Before storing the data in MariaDB, I was able to design a ERD from the data collected as to make sure the data is stored correctly and semantically.",
         "link": "https://github.com/MHEN007/Seleksi-2023-Tugas-1",
         "image": "/projects/ocw.png"
+    },
+    {
+        "title": "Point of Service App using Java",
+        "short_description": "A Point of Service (POS) App using Java for Object Oriented Programming Course",
+        "full_description": "This project utilizes OOP principles to create a Point of Service (POS) app. The app is made using Java and Swing GUI. The app accepts .xml, .json, and .obj files for the configuration. The app also comes in with plugins for currency and visualization tools. The app utilizes threads, reflections, inheritance, and many OOP principles. The app is compiled using Maven",
+        "link": "https://github.com/MHEN007/ShoppingSANS",
+        "image": "/projects/oop.jpeg"
+    },
+    {
+        "title": "WebGL 2D Engine",
+        "short_description": "A simple web 2D engine made using WebGL",
+        "full_description": "Simple 2D CAD engine using WebGL. The engine can draw lines, squares, rectangles, and polygons. Transformations of each objects drawn and animations can be implemented. Objects can be deleted, moved, and recolored based on vertex",
+        "link": "https://github.com/MHEN007/tugas-besar-grafkom-1-makan",
+        "image": "/projects/2d.png"
+    },
+    {
+        "title": "Shortest Path Finder and Visualizer",
+        "short_description": "A shortest path finder using some path finding algorithms",
+        "full_description": "Created using Java, this app finds the shortest path between two points in a grid and is able to visualize it using OpenStreetMap. The algorithms implemented are Uniform Cost Search and A* Search.",
+        "link": "https://github.com/MHEN007/Tucil3_13521007_13521009",
+        "image": "/projects/tucil3.png"
     },
     {
         "title": "Face Recognition with Eigenface",

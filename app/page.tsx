@@ -34,7 +34,9 @@ function HomeContent(){
           <Text 
             color={"gray.200"}
             fontSize={{base:"l", sm:"xl"}}>
-            Hi, my name is Matthew. I am a informatics student with interests in database technology, data management, data science, machine learning, and most importantly, software engineering.
+            Hi, my name is Matthew. Welcome to my portofolio! <br />
+            
+            I am an informatics student with interests in database technology, data management, data science, machine learning, and most importantly, software engineering.
 
             I have experiences in developing mobile apps, fullstack websites including backend services, machine learning models including NLP Models, CNN, and their frameworks such as PyTorch, and database design.
           </Text>

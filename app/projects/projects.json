@@ -1,5 +1,12 @@
 [
     {
+        "title": "SkillPath: A Course Recommender App",
+        "short_description": "An app to recommend courses from different plaforms",
+        "full_description": "A Bangkit Capstone Project to develop an android app that could recommend courses based on inputs of learning skills that a user would want. This project is made using Kotlin, Google Cloud Service, and TensorFlow.",
+        "link": "https://github.com/Capstone-Bangkit-C242-PS001",
+        "image": "/projects/skillpath.jpg"
+    },
+    {
         "title": "ANN from Scratch",
         "short_description": "A simple implementation of an Artificial Neural Network from scratch in Python",
         "full_description": "An implementation of Artificial Neural Network using Mini Batch Stochastic Gradient Descent using Python. The architecture supports training using forward and backpropagation. It is used to predict data from the Iris dataset (uncleaned, unprocessed), with an accuracy of 70%. The implementation uses Numpy packages for numerical processing. The implementation can give summary of the model in text or by outputing an image of the layers and weights of each neurons defined in the model. We provide with four activation functions all from scratch. Those being linear, relu, sigmoid (logistic), and softmax function. We also provide the derivative of each function for the backpropagation. We compare our results with Keras framework and achieved favourable results with our implementation. The model created uses Numpy Doc for docstring styling.",

@@ -38,6 +38,11 @@ function AboutMe(){
 
                         <ListItem>
                             <ListIcon as={CalendarIcon}/>
+                            Part-Time Software Engineer at EduBeyond (Feb 2025 - Now)
+                        </ListItem>
+
+                        <ListItem>
+                            <ListIcon as={CalendarIcon}/>
                             Bangkit Academy 2024 Machine Learning Cohort
                         </ListItem>
 

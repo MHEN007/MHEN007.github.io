@@ -17,7 +17,7 @@ function HomeContent(){
               src={"./assets/Mahen.JPG"} 
               alt="MHEN007"
               borderRadius={"full"}
-              boxSize={{base: 150, sm:200, md: 300}}/>
+              boxSize={{base: 100, sm:130, md: 200}}/>
           </Center>
 
           <Heading 

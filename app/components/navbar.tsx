@@ -31,16 +31,12 @@ export default function Navbar() {
             color={"gray.50"} 
             fontSize={{"base": "xl", "sm": "2xl", "md": "3xl"}} 
             as="b" 
-            p={2}>
+            p={1}>
             MHEN007
           </Text>
         </Link>
 
         <Spacer />
-
-        <Link as={NextLink} href="/about">
-          <NavItem text={"About Me"} />
-        </Link>
 
         <Link as={NextLink} href="/projects">
           <NavItem text={"Projects"} />

@@ -6,6 +6,8 @@ import Navbar from "../components/navbar"
 import projects from "./projects.json"
 import Footer from "../components/footer"
 import { UpDownIcon, ExternalLinkIcon } from "@chakra-ui/icons"
+import { useEffect, useState } from "react"
+import Pagination from "../components/pagination"
 
 function ProjectItem( { title, short_description, full_description, link, image } : { title: string, short_description: string, full_description: string, link: string, image: string }) {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -71,7 +73,21 @@ function ProjectItem( { title, short_description, full_description, link, image 
     )
 }
 
+export type Project = {
+    title: string;
+    short_description: string;
+    full_description: string;
+    link: string;
+    image: string;
+}
+
 function ProjectContent() {
+    const [viewProject, setProjects] = useState<Project[]>([])
+    const [page, setPage] = useState(1)
+    useEffect(() => {
+        const selectedProjects = projects.slice((page-1)*6, page*6)
+        setProjects(selectedProjects)
+    }, [page])
     return (
         <Stack
             py={{base:100, sm:150}}
@@ -85,10 +101,14 @@ function ProjectContent() {
             <Text textAlign={"center"} color={"gray.200"} fontSize={{base: "m", sm:"l"}}>
                 I&#39;ve selected some of my many projects to showcase here. The complete list can be viewed on my <Link href={"https://github.com/MHEN007"}>Github</Link>.
             </Text>
+
+            { /* Pagination Buttons */ }
+            <Pagination projects={projects} changeButton={setPage} currentPage={page}/>
             
+            { /* The Content */ }
             <Grid justifyContent={"center"} templateColumns={{base:'repeat(1, 1fr)', md: 'repeat(3, 1fr)'}}>
                 {
-                    projects.map((project: { title: string; short_description: string; full_description: string; link: string; image: string }) => {
+                    viewProject.map((project) => {
                         return (
                             <ProjectItem
                                 key={project.title}

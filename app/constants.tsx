@@ -1,0 +1,1 @@
+export const NUM_PROJECTS_PER_PAGE = 6

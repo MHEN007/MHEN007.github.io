@@ -3,6 +3,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 import '@fontsource/open-sans/400.css'
 import '@fontsource/ubuntu-mono/400.css'
+import '@fontsource-variable/anybody';
 
 export const metadata: Metadata = {
   title: "MHEN007's Website",

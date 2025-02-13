@@ -55,7 +55,7 @@ const MainDisplay = ( {currentValue, callback} : {currentValue: boolean, callbac
               fontSize={{base: "sm", sm: "md", md: "lg"}}
               fontFamily={"mono"}>
                 <ListIcon as = {FaCircle} color={"gray.200"} />
-                Pursuing a bachelor's degree for computer science at Bandung Institute of Technology (fourth year)
+                Pursuing a bachelor&#39;s degree for computer science at Bandung Institute of Technology (fourth year)
             </ListItem>
 
             <ListItem

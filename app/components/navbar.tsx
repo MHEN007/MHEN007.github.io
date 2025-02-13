@@ -38,10 +38,6 @@ export default function Navbar() {
 
         <Spacer />
 
-        {/* <Link as={NextLink} href="/about">
-          <NavItem text={"About Me"} />
-        </Link> */}
-
         <Link as={NextLink} href="/projects">
           <NavItem text={"Projects"} />
         </Link>

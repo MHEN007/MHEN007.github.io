@@ -1,5 +1,23 @@
 [
     {
+        "title": "MySQL Parameter Tuning with CDBTune using QPPN",
+        "short_description": "A MySQL parameter tuning tool using QPPN to optimize multiple objectives",
+        "full_description": "This project is a tool to tune MySQL parameters using CDBTune and QPPN. The tool is able to optimize multiple objectives such as throughput, latency, and resource usage. The tool is implemented using Python and MySQL. The tool is able to read the MySQL configuration file and modify the parameters accordingly. The tool is able to run the benchmark using Sysbench and collect the results. The tool is able to visualize the results using Matplotlib.",
+        "link": ["https://github.com/MHEN007/ParameterTuning", "https://digilib.itb.ac.id/gdl/view/100733/?rows=1325&per_page=37"]
+    }, 
+    {
+        "title": "Futurity Voice Simulation",
+        "short_description": "A voice simulation on Futurity Website using NextJS, LiveKit, and Python",
+        "full_description": "This project is a voice simulation feature on Futurity Website. The feature is made using NextJS for the front-end, LiveKit for the video and audio streaming, and Python for the back-end. The feature is able to simulate a voice call between two users.",
+        "link": "https://futurity.work"
+    },
+    {
+        "title": "Personal Website",
+        "short_description": "My personal website built using NextJS and TailwindCSS",
+        "full_description": "This website is built using NextJS and TailwindCSS. The website is hosted on Vercel. The website is a static website that showcases my projects, skills, and contact information.",
+        "link": "https://github.com/MHEN007/mhen007.github.io"
+    },
+    {
         "title": "SkillPath: A Course Recommender App",
         "short_description": "An app to recommend courses from different plaforms",
         "full_description": "A Bangkit Capstone Project to develop an android app that could recommend courses based on inputs of learning skills that a user would want. This project is made using Kotlin, Google Cloud Service, and TensorFlow.",

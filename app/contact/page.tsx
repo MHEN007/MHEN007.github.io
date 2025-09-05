@@ -1,49 +1,34 @@
 'use client'
 
-import { Box, Center, Flex, Heading, Stack, Text } from "@chakra-ui/react";
-import Content from "../components/content";
-import Navbar from "../components/navbar";
-import { Icon } from "@chakra-ui/icons";
 import { SocialIcon } from "react-social-icons";
-import Footer from "../components/footer";
 
-function ContactContent(){
+export default function ContactContent(){
     return (
-        <Stack py={{base:100, sm:150}} px={{base:5, sm:10}} color={"gray.200"}>
-            <Heading textAlign={"center"}>
+        <div className="flex flex-col p-10">
+
+            <div className="text-lg md:text-2xl w-full border-b-2 border-gray-400 pb-2 mb-5 font-bold">
                 Contact Me
-            </Heading>
+            </div>
             
-            <Text textAlign={"center"}>
-                If you would like to contact me, feel free to reach out on these platforms
-            </Text>
+            <p> 
+            If you would like to contact me, feel free to reach out on these platforms
+            </p>
 
-            <Center>
-                <Box mb={4}>
-                    <Flex gap='2' p={5}>
-                        <Center>
-                            <Icon as={SocialIcon} url="https://www.linkedin.com/in/matthew-mahendra-117845214/" />
-                        </Center>
-                        <Center>
-                            <Icon as={SocialIcon} url="https://github.com/MHEN007" />
-                        </Center>
-                        <Center>
-                            <Icon as={SocialIcon} url="https://www.instagram.com/matt_mahen/" />
-                        </Center>
-                    </Flex>
-                </Box>
-            </Center>
+            <div className="flex flex-col justify-center">
+                <div className="flex items-center">
+                    <SocialIcon url="https://www.linkedin.com/in/matthew-mahendra-117845214/" className="!w-10 !h-10 mr-2" target="_blank" />
+                    LinkedIn &nbsp;
+                </div>
+                <div className="flex items-center">
+                    <SocialIcon url="https://github.com/MHEN007" className="!w-10 !h-10 mr-2" target="_blank"/>
+                    GitHub &nbsp;
+                </div>
+                <div className="flex items-center">
+                    <SocialIcon url="https://www.instagram.com/matt_mahen/" className="!w-10 !h-10 mr-2" target="_blank"/>
+                    Instagram &nbsp;
+                </div>
+            </div>
 
-        </Stack>
-    )
-}
-
-export default function Contact(){
-    return (
-        <>
-        <Navbar />
-        <Content content={<ContactContent />} />
-        <Footer />
-        </>
+        </div>
     )
 }

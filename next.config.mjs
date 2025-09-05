@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "MHEN007.github.io"
+  basePath: ""
 };
 
 export default nextConfig;

@@ -13,7 +13,7 @@ export default function AboutCard() {
           📍 Jakarta, Indonesia
         </div>
         <div className="text-sm md:text-md">
-          💼 Software Engineer
+          💼 Consultant | Software Engineer
         </div>
         <div className="text-sm md:text-md">
           🏫 Bandung Institute of Technology

@@ -1,137 +1,60 @@
-'use client'
+import Link from "next/link";
+import projects from "./projects.json";
+import Image from "next/image";
 
-import { Card, CardBody, CardHeader, Grid, GridItem, Heading, Stack, Text, Image, CardFooter, Button, Spacer, Flex, Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, useDisclosure, Link, Center } from "@chakra-ui/react"
-import Content from "../components/content"
-import Navbar from "../components/navbar"
-import projects from "./projects.json"
-import Footer from "../components/footer"
-import { UpDownIcon, ExternalLinkIcon } from "@chakra-ui/icons"
-import { useEffect, useState } from "react"
-import Pagination from "../components/pagination"
-
-function ProjectItem( { title, short_description, full_description, link, image } : { title: string, short_description: string, full_description: string, link: string, image: string }) {
-    const { isOpen, onOpen, onClose } = useDisclosure()
-    return (
-        <GridItem>
-            <Card m={5} bg={"gray.900"} >
-                <CardHeader>
-                    <Center>
-                        <Image src={`./assets/${image}`} alt={"project image"} boxSize={200}/>
-                    </Center>
-                </CardHeader>
-                <CardBody color={"gray.100"}>
-                    <Heading fontSize={"2xl"} mb={5}>
-                        {title}
-                    </Heading>
-                    <Text fontSize={"md"}>
-                        {short_description}
-                    </Text>
-                </CardBody>
-                <CardFooter>
-                    <Flex gap={2}>
-                        <Button onClick={onOpen}  leftIcon={<UpDownIcon />}>
-                            View More
-                        </Button>
-                        <Spacer />
-                        {
-                            link === "" ? null : 
-                            <Link href={link}>
-                                <Button leftIcon={<ExternalLinkIcon />}>
-                                    View Project
-                                </Button>
-                            </Link>
-                        }
-                        
-                    </Flex>
-                </CardFooter>
-            </Card>
-
-            <Modal isOpen={isOpen} onClose={onClose}>
-                <ModalOverlay />
-                <ModalContent bg={"gray.800"} color={"gray.200"} minW={{base:"20em", sm:"30em", md:"45em"}}>
-                    <ModalHeader>
-                        <Heading mb={5}>
-                            {title}
-                        </Heading>
-                        <Center>
-                            <Image src={`./assets/${image}`} alt={"project image"} h="70%" w={"70%"}/>
-                        </Center>
-                    </ModalHeader>
-                    <ModalCloseButton />
-                    <ModalBody >
-                        {full_description}
-                    </ModalBody>
-
-                    <ModalFooter>
-                        <Button colorScheme='gray' mr={3} onClick={onClose}>
-                        Close
-                        </Button>
-                    </ModalFooter>
-                </ModalContent>
-            </Modal>
-        </GridItem>
-    )
-}
-
-export type Project = {
+type Project = {
     title: string;
-    short_description: string;
     full_description: string;
-    link: string;
-    image: string;
+    short_description: string;
+    link: string | string[];
+    image?: string;
 }
 
-function ProjectContent() {
-    const [viewProject, setProjects] = useState<Project[]>([])
-    const [page, setPage] = useState(1)
-    useEffect(() => {
-        const selectedProjects = projects.slice((page-1)*6, page*6)
-        setProjects(selectedProjects)
-    }, [page])
+function ProjectCard({ project }: { project: Project }) {
     return (
-        <Stack
-            py={{base:100, sm:150}}
-            px={{base:0, sm:10}}
-            >
-            <Heading
-                textAlign={"center"}
-                color={"gray.200"}>
-                Projects
-            </Heading>
-            <Text textAlign={"center"} color={"gray.200"} fontSize={{base: "m", sm:"l"}}>
-                I&#39;ve selected some of my many projects to showcase here. The complete list can be viewed on my <Link href={"https://github.com/MHEN007"}>Github</Link>.
-            </Text>
-
-            { /* Pagination Buttons */ }
-            <Pagination projects={projects} changeButton={setPage} currentPage={page}/>
-            
-            { /* The Content */ }
-            <Grid justifyContent={"center"} templateColumns={{base:'repeat(1, 1fr)', md: 'repeat(3, 1fr)'}}>
-                {
-                    viewProject.map((project) => {
-                        return (
-                            <ProjectItem
-                                key={project.title}
-                                title={project.title}
-                                short_description={project.short_description}
-                                full_description={project.full_description}
-                                link={project.link}
-                                image={project.image}
-                            />
-                        )
-                    })  
-                }
-            </Grid>
-        </Stack>
+        <div className="flex flex-row border-2 border-gray-400 p-5 rounded-lg">
+            <div className="mr-5">
+                {project.image && (
+                    <Image src={`/assets${project.image}`} alt={project.title} width={200} height={200} className="w-16 h-16 md:w-32 md:h-32 object-cover mr-5 rounded-lg"/>
+                )}
+            </div>
+            <div>
+                <div className="text-lg font-bold">{project.title}</div>
+                <div className="text-sm">{project.short_description}</div>
+                {Array.isArray(project.link) ? (
+                    project.link.map((link, index) => (
+                        <div key={index}>
+                            <Link href={link} className="text-blue-500 hover:underline">
+                                View Project {index + 1}
+                            </Link>
+                        </div>
+                    ))
+                ) : (
+                <Link href={project.link} className="text-blue-500 hover:underline">
+                    View Project
+                </Link>
+                )}
+            </div>
+        </div>
     )
 }
 
 export default function Projects() {
     return (
-        <>
-        <Navbar />
-        <Content content={<ProjectContent />} />
-        <Footer />
-        </>
+        <div className="flex flex-col p-10">
+            <div className="text-lg md:text-2xl w-full border-b-2 border-gray-400 pb-2 mb-5 font-bold">
+                Projects
+            </div>
+            
+            <div className="font-italic">
+                Here are some of my projects. More projects can be found on my <Link href="https://github.com/MHEN007" className="text-blue-500 hover:underline">Github page</Link>.
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5">
+                {projects.map((project, index) => (
+                    <ProjectCard project={project} key={index} />
+                ))}
+            </div>
+        </div>
     )
 }

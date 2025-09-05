@@ -22,7 +22,7 @@ export function HeadGoTo() {
   return (
     <div
       className={`flex md:hidden flex-row gap-3 items-center justify-center text-center mb-10 ${
-        isFixed ? "fixed top-0 left-0 w-full bg-gray-200 shadow-md py-2" : ""
+        isFixed ? "fixed top-0 left-0 w-full bg-[#f1f1f1] shadow-md py-2" : ""
       }`}
     >
       <div className="border-2 rounded-xl border-gray-400 bg-gray-400 p-1">

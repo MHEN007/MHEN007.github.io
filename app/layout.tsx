@@ -3,8 +3,8 @@ import "./globals.css";
 import '@fontsource/open-sans/400.css'
 import '@fontsource/ubuntu-mono/400.css'
 import '@fontsource-variable/anybody';
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 
 export const metadata: Metadata = {
   title: "MHEN007's Website",

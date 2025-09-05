@@ -28,7 +28,7 @@ export default function Intro() {
         <div id="about">
           <Header title="Welcome to My Homepage!" />
           <div className="text-sm md:text-lg">
-            Hello! I&apos;m Matthew Mahendra, but you can call me Mahen. I&apos;m a consultant in IT and a software engineer. I graduated from Bandung Institute of Technology in Informatics Engineering/Computer Science with Cum Laude.
+            Hello! I&apos;m Matthew Mahendra, but you can call me Mahen. I&apos;m a software engineer. I graduated from Bandung Institute of Technology in Informatics Engineering/Computer Science with Cum Laude.
             I am experienced in programming languages such as Python, SQL, Javascript, Java, Go, and basic bash programming. I have experience in full stack website development, creating machine learning models, database modeling and development, and currently developing a machine learning model to predict query workload performance in a DBMS as my final project. I have experiences in team work and coordination as the coordinator of teaching assistants in a college course.
           </div>
         </div>

@@ -12,6 +12,13 @@
         "link": "https://futurity.work"
     },
     {
+        "title": "Pawducitivity",
+        "short_description": "A productivity app for pet lovers built using Flutter and Golang Backend",
+        "full_description": "Pawducitivity is a productivity app for pet lovers. The app is built using Flutter for the front-end and Golang for the back-end. The app is able to track the user's productivity and provide rewards in the form of virtual pets. The app also has a feature to remind the user to take care of their pets.",
+        "link": "https://play.google.com/store/apps/details?id=com.production.pawductivity&pcampaignid=web_share",
+        "image": "/projects/pawducitivity.png"
+    },
+    {
         "title": "Personal Website",
         "short_description": "My personal website built using NextJS and TailwindCSS",
         "full_description": "This website is built using NextJS and TailwindCSS. The website is hosted on Vercel. The website is a static website that showcases my projects, skills, and contact information.",

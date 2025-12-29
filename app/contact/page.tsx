@@ -2,11 +2,26 @@
 import { SocialIcon } from "react-social-icons";
 import { useState, useEffect } from "react";
 import { randomBytes } from "crypto";
+import { getSocialMediaInfo } from "@/api/social-media";
 
 export default function ContactContent() {
   const [secureEmail, setSecureEmail] = useState("");
+  const [github, setGithub] = useState("");
+  const [instagram, setInstagram] = useState("");
+  const [linkedin, setLinkedin] = useState("");
   
   useEffect(() => {
+    const fetch = async () => {
+      const { status, response } = await getSocialMediaInfo();
+
+      if (status == 200) {
+        setGithub(response.github);
+        setInstagram(response.instagram);
+        setLinkedin(response.linkedin);
+      }
+    };
+
+    fetch();
     const xorKey = 'dQw4w9WgXcQ'.charCodeAt(randomBytes.length % 10);
     const xorEncoded = [75, 65, 90, 90, 72, 67, 88, 114, 75, 65, 72, 67, 76, 68, 93, 65, 126, 71, 75, 65, 73, 78, 114, 69, 79, 75];
     
@@ -38,21 +53,21 @@ export default function ContactContent() {
       <div className="flex flex-row justify-center gap-4 mb-8">
         <div className="flex items-center">
           <SocialIcon 
-            url="https://www.linkedin.com/in/matthew-mahendra-117845214/" 
+            url={linkedin}
             className="!w-10 !h-10" 
             target="_blank" 
           />
         </div>
         <div className="flex items-center">
           <SocialIcon 
-            url="https://github.com/MHEN007" 
+            url={github}
             className="!w-10 !h-10" 
             target="_blank"
           />
         </div>
         <div className="flex items-center">
           <SocialIcon 
-            url="https://www.instagram.com/matt_mahen/" 
+            url={instagram}
             className="!w-10 !h-10" 
             target="_blank"
           />

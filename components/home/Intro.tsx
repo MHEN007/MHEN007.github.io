@@ -1,5 +1,4 @@
-import experiences from "../../experiences/experiences.json";
-import ExperienceCard from "./ExperienceCard";
+import ExperienceCard, { experienceProps } from "./ExperienceCard";
 
 export function Header ({title}: {title: string}) {
     return (
@@ -21,7 +20,7 @@ function Skills ({skills}: {skills: string[]}) {
     )
 }
 
-export default function Intro() {
+export default function Intro({ experiences } : { experiences: experienceProps[]}) {
   const skills = ["Python", "SQL", "Javascript", "Java", "Go", "PostgreSQL", "LaTeX", "MySQL", "NextJS", "FastAPI", "PyTorch", "Machine Learning", "Database Modelling", "Full Stack Development"];
     return (
       <div className="flex flex-col sm:mt-5 w-full md:w-[50%] mt-10 md:mt-0 gap-10">

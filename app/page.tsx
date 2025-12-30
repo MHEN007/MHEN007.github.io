@@ -4,10 +4,11 @@ import AboutCard from "../components/home/AboutCard";
 import { DefaultGoTo, HeadGoTo } from "../components/home/GoTo";
 import Intro from "../components/home/Intro";
 import { getExperiences } from "@/api/experience";
+import { experienceProps } from "@/components/home/ExperienceCard";
 
 export default function Home() {
 
-  const [experiences, setExperiences] = useState([])
+  const [experiences, setExperiences] = useState<experienceProps[]>([])
 
   useEffect(
     () => {

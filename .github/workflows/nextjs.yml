@@ -24,6 +24,23 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # Lint Job
+  build:
+    runs-on: ubuntu-slim
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      
+      - name: Setup bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.5
+
+      - name: Dependencies install
+        run: bun install
+      
+      - name: Lint
+        run: bun lint
   # Build job
   build:
     runs-on: ubuntu-latest
